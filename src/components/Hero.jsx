@@ -43,7 +43,7 @@ const Hero = () => {
             <button
               onClick={() => setShowModal(false)}
               className="bg-pink-500 hover:bg-pink-600 text-white px-6 py-2 rounded-full"
-            >    
+            >
               Close 
             </button>
           </div>
