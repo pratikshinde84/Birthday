@@ -46,7 +46,7 @@ const Hero = () => {
             >      
                 
               Close    
-            </button>
+            </button> 
           </div>
         </div>
       )}
