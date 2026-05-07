@@ -49,7 +49,7 @@ const Hero = () => {
             </button> 
           </div>
         </div>
-      )}
+      )} 
       {/* Floating Bougainvillea Flowers */}
       <div className="absolute inset-0 pointer-events-none">
         {[...Array(15)].map((_, i) => (
