@@ -51,7 +51,7 @@ const Hero = () => {
         </div>     
       )} 
       {/* Floating Bougainvillea Flowers */} 
-      <div className="absolute inset-0 pointer-events-none">
+      <div className="absolute inset-0 pointer-events-none"> 
         {[...Array(15)].map((_, i) => (
           <motion.div
             key={i}
