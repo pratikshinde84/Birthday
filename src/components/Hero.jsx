@@ -48,7 +48,7 @@ const Hero = () => {
               Close     
             </button> 
           </div>
-        </div> 
+        </div>  
       )} 
       {/* Floating Bougainvillea Flowers */}
       <div className="absolute inset-0 pointer-events-none">
