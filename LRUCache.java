@@ -84,10 +84,6 @@ public class LRUCache {
         addNode(new Node(key_, value));
         m.put(key_, head.next);
     }
-}
-
-// Driver code
-public class Main {
     public static void main(String[] args) {
         // Create cache with capacity 2
         LRUCache cache = new LRUCache(2);
