@@ -54,10 +54,16 @@ public class LRUCache {
         if (m.containsKey(key_)) {
             
             // Remove old mapping
+            Node oldNode = m.get(key_);
+            deleteNode(oldNode);
             
             // Move accessed node to front
-            
+            addNode(oldNode);
+
             // Update map
+            m.put(key_, head.next);
+            // Return value
+            return head.next.val;
             
         }
         // If not found
@@ -67,11 +73,21 @@ public class LRUCache {
     // Function to put key-value into cache
     public void put(int key_, int value) {
         // If key already exists
-        
+        if (m.containsKey(key_)) {
+            // Remove old mapping
+            Node oldNode = m.get(key_);
+            deleteNode(oldNode);
+        }
         // If capacity reached
-        
+        if (m.size() == cap) {
+            // Remove least recently used node
+            m.remove(tail.prev.key);
+            deleteNode(tail.prev);
+        }
         // Insert new node at front
-        
+        addNode(new Node(key_, value));
+        // Update map
+        m.put(key_, head.next);
     }
     public static void main(String[] args) {
         // Create cache with capacity 2
